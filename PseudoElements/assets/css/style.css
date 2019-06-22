@@ -1,0 +1,115 @@
+/* .custom-radio-button input[type="radio"] {
+  display: none;
+}
+
+.custom-radio-button input[type="radio"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 3px solid #30ba83;
+}
+
+.custom-radio-button input[type="radio"] + label {
+  display: inline-block;
+  position: relative;
+}
+
+.custom-radio-button input[type="radio"] + label:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: #30ba83;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, calc(-50% - 2px), 0);
+  opacity: 0;
+}
+
+.custom-radio-button input[type="radio"]:checked + label:after {
+  opacity: 1;
+}
+
+.custom-radio-button input[disabled] + label:after {
+  background-color: gray;
+}
+
+.custom-radio-button input[disabled] + label:before {
+  border-color: gray;
+} */
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-item .checkbox-label {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.checkbox-item .checkbox-label label.checkbox-desc {
+  vertical-align: super;
+}
+
+.checkbox-item input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-item .checkbox-label label.checkbox-trigger {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #6200ee;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkbox-item label.checkbox-trigger::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 11px;
+  height: 6px;
+  top: 4px;
+  left: 3px;
+  border-bottom: 3px solid #6200ee;
+  border-left: 3px solid #6200ee;
+  transform: scale(0) rotate(-45deg);
+  transition: transform .2s ease-in;
+}
+
+.checkbox-item input[type="checkbox"]:checked+.checkbox-label label:after {
+  transform: scale(1) rotate(-45deg);
+}
+
+.checkbox-item input[disabled]+.checkbox-label label.checkbox-trigger,
+.checkbox-item input[disabled]+.checkbox-label label.checkbox-trigger::after {
+  border-color: #9e9e9e;
+}
+
+.checkbox-item input[disabled]+.checkbox-label label.checkbox-desc {
+  color: #9e9e9e;
+}
+
+.form-element .custom-input {
+  font-size: 18px;
+  border: 2px solid gray;
+  padding: 10px 15px;
+  outline: none;
+  border-radius: 4px;
+  transition: .3s linear;
+}
+
+.form-element .custom-input:focus {
+  border-color: #6200EE;
+  padding-left: 20px;
+}

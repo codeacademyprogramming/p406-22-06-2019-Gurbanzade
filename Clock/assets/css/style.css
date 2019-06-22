@@ -1,0 +1,46 @@
+.clock-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock .clock-img img {
+  width: 300px;
+}
+
+.clock {
+  position: relative;
+}
+
+.clock .arrow {
+  position: absolute;
+  left: calc(50% - 4px);
+  width: 4px;
+  height: calc(50% - 45px);
+  bottom: 50%;
+  background-color: black;
+  transform-origin: bottom;
+  transition: transform 60s linear;
+}
+
+.clock .arrow.start {
+  transform: rotate(360deg);
+}
+
+.clock .arrow:before {
+  content: '';
+  position: absolute;
+}
+
+.clock:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 50%;
+  top: 50%;
+  background-color: black;
+  border-radius: 100%;
+  transform: translate3d(-50%, -50%, 0);
+}

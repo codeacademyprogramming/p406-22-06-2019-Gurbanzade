@@ -1,0 +1,40 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+div.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.transform-element {
+  margin-top: 80px;
+}
+
+.square {
+  width: 150px;
+  height: 150px;
+  background-color: #6200EE;
+  margin: 0 40px;
+}
+
+.item-list {
+  display: flex;
+  justify-content: center;
+}
+
+.rotate-45deg {
+  transform: rotate(45deg);
+}
+
+.rotate-y-45deg {
+  transform: rotateY(45deg);
+}
+
+.rotate-x-45deg {
+  transform: rotateX(45deg);
+}
+
+.transition {
+  transition: all .5s linear;
+}
